@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image-slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-slider">
+            <div class="image-slider-item">
+                <img src="./arrowR.png" alt="hgds" class="r" onclick="prev()">
+                <img src="./2.jpg" alt="alter" class="main" id="mainimg">
+                <img src="./arrowL.png" alt="usg" class="l" onclick="next()">    
+            </div>
+            <div class="image-slider-item">
+                <!-- <img src="./arrowR.png" alt="hgds" class="r" onclick="nxt(1)"> -->
+                <img src="./6.jpg" alt="alter" class="main" id="secondimg">
+                <!-- <img src="./arrowL.png" alt="usg" class="l" onclick="nxt(2)">     -->
+            </div>
+        </div>
+    </div>
+    <script>
+       
+       const imgarry = ["2.jpg","3.jpg","4.jpg", "5.jpg","mainBG.jpg"];
+       let mainImg = document.getElementById("mainimg");
+       let index= 0;
+        function next() {
+           if (index == imgarry.length-1 ) {
+                index=0;
+
+           }
+           else{
+                index++;
+           }
+           mainImg.src= imgarry[index];
+        }
+        function prev() {
+            if (index==0) {
+                index= imgarry.length-1;
+            }
+            else{
+                index--;
+            }
+            mainImg.src= imgarry[index];
+        }
+
+        const secImg= ["6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"]
+        const sec = document.getElementById("secondimg");
+        let indexs = 0;
+        function nxt() {
+            
+            
+           if(indexs==secImg.length-1){
+            indexs==0;
+           }
+           else{
+            indexs = indexs+1;
+           }
+           sec.src= secImg[indexs];
+        }
+        setInterval(nxt , 3000);
+    </script>
+</body>
+</html>
