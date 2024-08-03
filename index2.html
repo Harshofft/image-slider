@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(./10.jpg);
+        }
+        .name{
+            width: 15rem;
+            height: 3rem;
+            margin: 1rem;
+            border: none;
+            border-radius: 1rem;
+            background-color: #1f1f2e;
+            color: whitesmoke;
+            text-align: center;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center ;
+        }
+        .btn-submit{
+            border: none;
+            width: 5rem;
+            height: 2.5rem;
+            border-radius: 1rem;
+            margin: 2rem;
+            background-color: #4da6ff;
+        }
+        .btn-submit:hover{
+            background: #0066cc;
+        }
+        .outp{
+            color: aliceblue;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="./index.html">img gallary</a>
+        <form class="form" >
+            <input type="text" class="name" id="name" placeholder="enter your name">
+            <input type="text" class="name" id="age" placeholder="enter your age">
+            <button class="btn-submit" onclick="local()" type="button">Submit</button>
+        </form>
+        <p class="outp" id="greet"></p>
+        <p class="outp" id="ages"></p>
+    </div>
+    <script>
+        let nameElement = document.getElementById("name")
+        let ageELement = document.getElementById("age")
+        
+        function local() {
+           const nameValue=nameElement.value;
+           const ageValue= ageELement.value;
+           let greet = document.getElementById("greet")
+           const ageop= document.getElementById("ages")
+           console.log("hey");
+            if (!nameValue) {
+                alert("Please enter your name");
+                return;
+            }
+            else if (!ageValue){
+                alert("Please enter your age");
+                return;
+            }
+            console.log("hey1");
+            localStorage.setItem('name', JSON.stringify(nameElement.value));
+            localStorage.setItem('age', JSON.stringify(ageELement.value));
+            greet.innerText = `hey ${JSON.parse(localStorage.getItem('name'))}`;
+            ages.innerText = `hey ${JSON.parse(localStorage.getItem('age'))}`;
+            console.log("hey2");
+        }
+    </script>
+</body>
+</html>

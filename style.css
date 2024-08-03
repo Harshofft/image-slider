@@ -14,6 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .image-slider{
     display: flex;
@@ -35,4 +36,17 @@
 }
 .main{
     width: 400px;
+}
+.btn2{
+    width: 9rem;
+    height: 2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: white;
+    background-color: #4da6ff;
+    text-align: center;
+    padding-top: 6px;
+}
+.btn2:hover{
+    background: #0066cc;
 }
