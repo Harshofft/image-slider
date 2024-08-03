@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <a href="./index2.html" class="btn2">localStorage</a>
+        <a href="./pages/index2.html" class="btn2">localStorage</a>
         <div class="image-slider">
             <div class="image-slider-item">
                 <img src="./arrowR.png" alt="hgds" class="r" onclick="prev()">
@@ -53,7 +53,7 @@
         function nxt() {
             
             
-           if(indexs==secImg.length-1){
+           if(indexs == secImg.length-1){
             indexs==0;
            }
            else{
@@ -61,7 +61,7 @@
            }
            sec.src= secImg[indexs];
         }
-        setInterval(nxt , 3000);
+        setInterval(nxt , 3000 );
     </script>
 </body>
 </html>
