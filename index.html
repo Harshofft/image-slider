@@ -11,20 +11,20 @@
         <a href="./pages/index2.html" class="btn2">localStorage</a>
         <div class="image-slider">
             <div class="image-slider-item">
-                <img src="./arrowR.png" alt="hgds" class="r" onclick="prev()">
-                <img src="./2.jpg" alt="alter" class="main" id="mainimg">
-                <img src="./arrowL.png" alt="usg" class="l" onclick="next()">    
+                <img src="./img/arrowR.png" alt="hgds" class="r" onclick="prev()">
+                <img src="./img/2.jpg" alt="alter" class="main" id="mainimg">
+                <img src="./img/arrowL.png" alt="usg" class="l" onclick="next()">    
             </div>
             <div class="image-slider-item">
                 <!-- <img src="./arrowR.png" alt="hgds" class="r" onclick="nxt(1)"> -->
-                <img src="./6.jpg" alt="alter" class="main" id="secondimg">
+                <img src="./img/6.jpg" alt="alter" class="main" id="secondimg">
                 <!-- <img src="./arrowL.png" alt="usg" class="l" onclick="nxt(2)">     -->
             </div>
         </div>
     </div>
     <script>
        
-       const imgarry = ["2.jpg","3.jpg","4.jpg", "5.jpg","mainBG.jpg"];
+       const imgarry = ["./img/2.jpg","./img/3.jpg","./img/4.jpg", "./img/5.jpg","./img/mainBG.jpg"];
        let mainImg = document.getElementById("mainimg");
        let index= 0;
         function next() {
@@ -47,7 +47,7 @@
             mainImg.src= imgarry[index];
         }
 
-        const secImg= ["6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"]
+        const secImg= ["./img/6.jpg","./img/7.jpg","./img/8.jpg","./img/9.jpg","./img/10.jpg"]
         const sec = document.getElementById("secondimg");
         let indexs = 0;
         function nxt() {
