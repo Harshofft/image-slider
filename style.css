@@ -30,9 +30,11 @@
 }
 .r{
     height: 2rem;
+    cursor: pointer;
 }
 .l{
     height: 2rem;
+    cursor: pointer;
 }
 .main{
     width: 400px;
